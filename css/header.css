@@ -11,6 +11,11 @@
       width: 90%;
     }
   }
+@media (max-width: 480px) {
+    .header{
+      width: 85%;
+    }
+  }
 
 .header__buttons {
   display: -webkit-box;
