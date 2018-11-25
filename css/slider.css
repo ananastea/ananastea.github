@@ -115,7 +115,7 @@
     margin-bottom: 30px; }
     @media (max-width: 768px) {
       .burger__text {
-        font-size: 15px; } }
+        font-size: 0.9375rem; } }
   .burger__order {
     display: -webkit-box;
     display: -ms-flexbox;
