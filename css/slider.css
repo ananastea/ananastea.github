@@ -13,7 +13,8 @@
   }
 
 .burgers {
-  position: relative; }
+  position: relative;
+	display: flex; }
 
   .burgers__wrapper {
     overflow: hidden;
