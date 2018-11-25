@@ -1,0 +1,76 @@
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+  @media (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media (max-width: $phones) {
+    @content;
+  }
+}
+
+@function rem($px){
+  @return $px / 16px + 0rem;
+}
+
+.fixed-menu {
+  position: fixed;
+  top: rem(80px);
+  right: rem(45px);
+   @include tablets {
+    display: none;
+  }
+}
+
+
+
+.points__item {
+	margin-bottom: rem(10px);
+}
+
+.points__item--active .points__link {
+	border-color: #fff;
+}
+
+.points__link {
+	display: block;
+	width: rem(16px);
+	height: rem(16px);
+	border: 1px solid transparent;
+	border-radius: 50%;
+	position: relative;
+
+	&:hover {
+	border-color: #fff;
+	}
+
+
+	&:before {
+	display: block;
+	content: "";
+	width: rem(6px);
+	height: rem(6px);
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 	}
+} 
+.scroll{
+  align-self: center;
+    margin-bottom: rem(40px);
+}
+
+.scroll-down{
+  display: block;
+    background-image: url(../img/arrow-scroll.png);
+    width: rem(29px);
+    height: rem(14px);
+    background-repeat: no-repeat;
+}

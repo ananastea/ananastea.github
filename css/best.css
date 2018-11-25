@@ -1,0 +1,83 @@
+.best {
+  background: url("../img/bg.jpg") center center no-repeat;
+  background-size: cover; }
+
+.best__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 480px) {
+    .best__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+
+.best__item {
+  margin-right: 1.25rem;
+  width: 33.3%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  
+  text-align: center;
+  line-height: 1; }
+  .best__item:last-child {
+    margin-right: 0; }
+  @media (max-width: 480px) {
+    .best__item {
+      display: flex;
+  flex: 1;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      width: 100%;} }
+
+@media (max-width: 480px) {
+  .best__content {
+    text-align: left;
+    margin-left: 5%;} }
+
+.section-title--best {
+  text-align: center;
+  margin-bottom: 4.375rem;
+  letter-spacing: 0.125rem;
+  color: black; }
+
+.best__svg{
+    max-width: 6.0625rem;
+    max-height: 5.5625rem;
+}
+
+.best__title-list {
+  font-family: Lifehack-Medium;
+  font-size: 1.5075rem;
+  padding-top: 2.8125rem;
+  margin-bottom: 1.6875rem; 
+   }
+
+.container--best {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.best__text {
+  font-family: Ubuntu;
+  line-height: 1.8em;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #2f3234;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @media (max-width: 480px) {
+    .best__text{
+      margin-top: 0.625rem;}
+} 
+}
+
+.best__icon {
+  min-height: 5.8125rem; }

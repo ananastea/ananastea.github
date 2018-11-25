@@ -1,0 +1,318 @@
+.slider {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
+  background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  background: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+  position: relative; }
+.container--burger{
+  display: flex;
+  justify-content: center;
+  }
+  .section-title--slider{
+    color: white;
+  }
+
+.burgers {
+  position: relative; }
+
+  .burgers__wrapper {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .burgers__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); }
+    .burgers__list.is-reverse {
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+     }
+    .burgers__list.is-move {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      transition: transform .5s ease; }
+  .burgers__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    order: 2; }
+    .burgers__item.is-one{
+      order: 1;
+    }
+.burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: relative; }
+  @media (max-width: 768px){
+  .burger {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+  }
+  }
+  .burger__pic {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 7rem 0; }
+    @media (max-width: 768px) {
+      .burger__pic {
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+        padding-bottom: 0;
+        text-align: center; } }
+  @media (max-width: 768px) {
+    .burger__img {
+      max-width: 80%; } }
+  .burger__desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 1%; }
+    @media (max-width: 768px) {
+      .burger__desc {
+        -webkit-box-flex: 1;
+        -ms-flex: auto;
+        flex: auto;
+        text-align: center; } }
+  .burger__text {
+    font-family: 'ubuntulight', Arial, sans-serif;
+    font-size: 0.875rem;
+    color: #fff;
+    line-height: 1.714;
+    margin-top: 46px;
+    margin-bottom: 30px; }
+    @media (max-width: 768px) {
+      .burger__text {
+        font-size: 15px; } }
+  .burger__order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 768px) {
+      .burger__order {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+  .burger__price {
+    font-family: Gagalin-regular;
+    color: #e35028;
+    margin-right: 1.875rem;
+    padding-bottom: 10px; }
+    .burger__price--cost {
+      font-size: 4.4375rem; }
+    .burger__price--text {
+      font-size: 1.875rem; }
+  .burger__composition {
+ 
+    padding: 0.8125rem 1.3125rem;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    left: 1.875rem;
+    
+  
+  }
+
+  .burger__composition--top{
+    background-color: #eb8c38;
+    top:2rem;
+  }
+     .burger__composition--top:hover {
+      background-color: #e45028; }
+  .burger__value {
+
+    bottom: 2.5rem; }
+    @media (max-width: 768px) {
+      .burger__value {
+        top: 2.5rem;
+        right: 4rem;
+        left: auto;
+        bottom: auto; } }
+    @media (max-width: 480px) {
+      .burger__value {
+        top: 1rem; } }
+
+        .burger__composition--hover{
+          position: absolute;
+          top: 0;
+          left: 100%;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          background-color: #FFFFFF;
+          display: none;
+        }
+        .burger__composition--hover.open{
+          display: block;
+        }
+
+.burger__composition--img {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  fill: #FFFFFF;
+  margin-bottom: 4px; }
+
+.burger__value--img {
+  width: 3.75rem;
+  height: 3.75rem;
+  fill-opacity: 0.5; }
+
+.burger__value--text {
+  font-family: Gagalin-Regular;
+  font-size: 0.875rem;
+  color: #fff;
+  opacity: .5;
+  
+ }
+ .burger__composition--text{
+  font-family: Gagalin-Regular;
+  font-size: 0.875rem;
+  color: #fff;
+ }
+
+ .burger__value--num {
+      font-size: 1.25rem;
+      opacity: .5;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+      transform: translate(-50%, -50%);
+
+		}
+
+@media (max-width: 768px) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.burger__composition--icon {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  display: none;}
+  
+    
+  .burger__composition--icon .ingredients {
+    width: 270px;
+    padding: 18px 22px; }
+    .burger__composition--icon .ingredients__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: .875rem;
+      font-family: Ubuntu-Regular;
+      font-weight: 500; }
+    .burger__composition--icon .ingredients__name {
+      margin-left: 24px; }
+    .burger__composition--icon .ingredients__weight {
+      margin-left: auto; }
+  .burger__composition--icon .ingredients__icon-beef,
+  .burger__composition--icon .ingredients__icon-sauce {
+    fill: #e45028; }
+  .burger__composition--icon .ingredients__icon-salad,
+  .burger__composition--icon .ingredients__icon-cucumber {
+    fill: #8ac03e; }
+  .burger__composition--icon .ingredients__icon-buns,
+  .burger__composition--icon .ingredients__icon-cheese {
+    fill: #f8b43a; }
+
+    .scroll--left{
+      left: -2rem;
+      position: absolute;
+      top: 50%;
+      outline: none;
+
+    }
+    .scroll--right{
+      right: -2rem;
+      position: absolute;
+      top: 50%;
+      outline: none;
+    }
+
+    .scroll-down--right{
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    .scroll-down--left{
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+    .ingredients {
+      width: 270px;
+      padding: 1rem 1.5rem;
+    }
+    .ingredients__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.625rem;
+        font-size: 0.875rem;
+        font-family: Ubuntu-Regular;
+        font-weight: 500;
+      }
+      .ingredients__item:last-child {
+        margin-bottom: 0;
+      } 
+      .ingredients__name {
+        margin-left: 1.25rem;
+      }
+    
+      .ingredients__weight {
+        margin-left: auto;
+      }
+    

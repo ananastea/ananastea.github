@@ -1,0 +1,102 @@
+.footer {
+  background: url("../img/footer.jpg") center bottom no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.625rem 0; }
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media (max-width: 480px) {
+    .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+
+.footer__col {
+  width: 50%;
+  margin-bottom: 0.9375rem; }
+  @media (max-width: 480px) {
+    .footer__col {
+      width: 100%;
+      text-align: center; } }
+
+.footer__address {
+  color: #ffffff;
+  font-size: 0.875rem; }
+
+
+
+.footer__col_right {
+  text-align: right;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  @media (max-width: 480px) {
+    .footer__col_right {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+
+.map {
+  background: url(../img/map.jpg) center center/cover no-repeat; }
+
+.socials {
+     display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+     display: flex;
+}
+
+.socials__link-icon {
+     fill: #5a5a5a;
+	width: 20px;
+	height: 16px;
+	margin-left: 19px;}
+
+.socials__link-icon:hover {
+		fill: #fff;
+}
+
+.footer__phone {
+	font-size: 0.875rem;
+    font-family: Ubuntu;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #e35028;
+    font-weight: bold;
+    margin-top: 0.625rem;
+}
+@media (max-width: 480px) {
+.footer__phone {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+	}}
+
+.footer__icon-img {
+    width: 0.75rem;
+    height: 0.6875rem;
+    margin-right: 0.625rem;
+}
+
+

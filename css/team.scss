@@ -1,0 +1,158 @@
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+  @media (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media (max-width: $phones) {
+    @content;
+  }
+}
+
+@function rem($px){
+  @return $px / 16px + 0rem;
+}
+
+.team {
+	background: url("../img/team.jpg") 50% no-repeat;
+	background-size: cover;
+	position: relative;
+
+	.section__title {
+		margin-bottom: 12%;
+	}
+}
+
+.team__content {
+  text-align: center;
+}
+
+.container--team {
+	position: absolute;
+	right: 0;
+	top: 0;
+  bottom: 0;
+  left: 50%;
+	background: rgba(#2f3234, .93);
+  padding: 5% 2% 0 7%;
+  
+
+
+  @include tablets {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+.team-acco__item {
+  margin-bottom: rem(40px);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    .team-acco__trigger {
+      color: #f8b43a;
+
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .team-acco__content {
+      display: flex;
+      @include tablets{
+        flex-direction: column;
+        align-items: center;
+  }
+    }
+  }
+}
+
+.team-acco__trigger {
+  color: #fff;
+  font-size: rem(14px);
+  font-style: Gagalin-Regular;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: rem(20px);
+  
+  
+  @include tablets() {
+    font-size: rem(25px);
+      display: inline-flex;
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: rem(-18px);
+    top: rem(8px);
+    width: 0;
+    height: 0;
+  }
+
+  &:before {
+    border-top: rem(7px) solid #f8b43a;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(0px) solid transparent;
+    transform: rotate(0deg);
+    transition: .3s;
+  }
+
+  &:after {
+    display: none;
+    border-bottom: rem(7px) solid #f8b43a;
+    border-left: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-top: rem(0px) solid transparent;
+  }
+}
+
+.team-acco__content {
+  padding-top: rem(14px);
+  display: none;
+}
+
+.team-acco__pic {
+  text-align: center;
+  width: 30%;
+}
+
+.team-acco__img {
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+}
+
+.team-acco__text {
+  width: 70%;
+}
+
+
+
+.team-acco__title {
+  font-style: ubuntu-b;
+  font-size: rem(14px);
+  color: #fff;
+  margin-bottom: rem(14px);
+}
+
+.team-acco__text-content {
+  font-style: Ubuntu-Light;
+  color: #fff;
+  font-size: rem(14px);
+}

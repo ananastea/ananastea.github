@@ -1,0 +1,91 @@
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+  @media (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media (max-width: $phones) {
+    @content;
+  }
+}
+
+@function rem($px){
+  @return $px / 16px + 0rem;
+}
+
+.hero{
+	background: url(../img/texture.jpg) center center/cover no-repeat;
+
+}
+
+.hero__container {
+/*width: 100%;*/
+display: flex;
+align-items: center;
+   @include tablets{
+    flex-direction: column;
+    padding: 0 12%;
+    text-align: center;
+  }
+  @include phones{
+     padding: 0 5%;
+
+  }
+}
+
+.container--hero{
+  justify-content: space-between;
+}
+
+.hero__content {
+  flex: .8;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.hero__text {
+  color: #fff;
+  width: 50%;
+}
+
+.hero__pic,.hero__text {
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.hero__pic-img{
+  width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: rem(72px);
+    color: #f8b43a;
+    margin: 0;
+   font-family: Gagalin-Regular;
+    @include tablets {
+     font-size: rem(63px);
+  }
+}
+
+.hero__desc{
+      display: block;
+    font-family: Lifehack-Medium;
+    font-size: rem(65px);
+    color: #fff;
+    padding-top: rem(20px);
+    line-height: 1;
+    @include tablets {
+     font-size: rem(54px);
+  }
+}

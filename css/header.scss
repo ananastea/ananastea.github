@@ -1,0 +1,19 @@
+$tablets: 768px;
+$phones: 480px;
+
+
+@function rem($px){
+  @return $px / 16px + 0rem;
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	padding-top: rem(10px);
+}
+
+.header__buttons{
+	display: flex;
+	align-items: center;
+	 margin-left: auto;
+}

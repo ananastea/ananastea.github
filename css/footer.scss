@@ -1,0 +1,74 @@
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+  @media (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media (max-width: $phones) {
+    @content;
+  }
+}
+
+@function rem($px){
+  @return $px / 16px + 0rem;
+}
+
+.footer {
+  background: url('../img/footer.jpg') center bottom no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: rem(10px) 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__col {
+  width: 50%;
+  margin-bottom: rem(15px);
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__address {
+  color: #ffffff;
+  font-size: rem(14px);
+}
+
+.footer__phone {
+  color: #e35028;
+  font-family: ubuntu-b;
+  text-decoration: none;
+  font-size: rem(14px);
+}
+
+.footer__col_right {
+  text-align: right;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.yandex-map{
+  background: url(../img/map.jpg) center center/cover no-repeat;
+
+}

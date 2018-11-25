@@ -1,0 +1,31 @@
+.btn--red {
+	text-decoration: none;
+	background-color: #e45028;
+	border-radius: rem(5px);
+	padding: rem(12px) rem(18px);
+	color: #fff;
+	text-transform: uppercase;
+	font-family: Ubuntu;
+	font-weight: medium;
+	font-size: rem(13px);
+}
+
+.btn-learn-more {
+	display: block;
+	text-decoration: none;
+	padding: rem(12px) rem(14px) rem(12px) rem(14px);
+	border-radius: rem(5px);
+	background-color: #2f3234;
+	text-transform: uppercase;
+	font-family: Ubuntu;
+	font-weight: Medium;
+	font-size: rem(13px);
+	color: #fff;
+	width: 50%;
+	text-align: center;
+	line-height: 1;
+
+	&:hover {
+		background-color: #1f2122;
+	}
+}
