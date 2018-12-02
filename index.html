@@ -701,7 +701,7 @@
             <div class="section-title section-title-team">Команда</div>
             <ul class="team-acco">
               <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                <a href="" class="team-acco__trigger">Дэниел Редклифф</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <img class="team-acco__pic-img" src="./img/aphex.jpg" alt="">
@@ -716,8 +716,8 @@
                   </div>
                 </div>
               </li>
-              <li class="team-acco__item active">
-                <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
+              <li class="team-acco__item">
+                <a href="" class="team-acco__trigger">Ричард Джеймс</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <img class="team-acco__pic-img" src="./img/aphex.jpg" alt="">
@@ -733,7 +733,7 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Джейк Финн</a>
+                <a href="" class="team-acco__trigger">Джейк Финн</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <img class="team-acco__pic-img" src="./img/aphex.jpg" alt="">
@@ -749,7 +749,7 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Николай Иванов</a>
+                <a href="" class="team-acco__trigger">Николай Иванов</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <img class="team-acco__pic-img" src="./img/aphex.jpg" alt="">
@@ -829,23 +829,23 @@
         <div class="container container--order">
           <div class="section-title section-title--order">Закажите доставку</div>
           <div class="form">
-            <form action="" class="form__elem">
+            <form action="https://webdev-api.loftschool.com/sendmail" method="POST" class="form__elem">
               <div class="form__content">
 		      <div class="form__col">
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__block-title">Имя</div>
-                    <input type="text" class="form__input">
+                    <input type="text" class="form__input" name="name" required>
                   </label>
                   <label class="form__block">
                     <div class="form__block-title">Телефон</div>
-                    <input type="text" class="form__input" placeholder="89212264923">
+                    <input type="phone" class="form__input" name="phone" placeholder="89212264923" required>
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__block-title">Улица</div>
-                    <input type="text" class="form__input">
+                    <input type="text" class="form__input" name="street"  required>
                   </label>
                 </div>
                 <div class="form__row">
@@ -871,7 +871,7 @@
 			       <div class="form__row">
                  		 <label class="form__block">
                 		    <div class="form__block-title">Коментарий</div>
-                		    <input type="text" class="form__input form__input--textarea">
+                		    <input type="text" name="comment"  class="form__input form__input--textarea">
                 		  </label>
                   
                			 </div>
@@ -879,12 +879,12 @@
 					<div class="form__row">
 						<div class="form__radio">
 							<label class="form__radio">
-								<input type="radio" class="form__radio--icon" name="paymant">
+								<input type="radio" class="form__radio--icon" name='paymant' value="cash">
 								<span class="form__radio--icon--custom"></span>
 								<div class="form__text">Потребуется сдача</div>
 							</label>
 							<label class="form__radio">
-								<input type="radio" name="paymant" class="form__radio--icon" checked="">
+								<input type="radio" name='paymant' class="form__radio--icon" value="card" checked>
 								<span class="form__radio--icon--custom"></span>
 								<div class="form__text">Оплата по карте</div>
 							</label>
@@ -892,14 +892,14 @@
 					</div>
 						<div class="form__row">
 							<label class="form__check">
-								<input type="checkbox" class="form__check--icon">
+								<input type="checkbox" class="form__check--icon" name="call">
 								<span class="form__check--icon--custom"></span>
 								<div class="form__text">Не перезванивать</div>
 							</label>
 						</div>
 						<div class="form__row">
-							<a href="#" class="btn btn--red">Заказать</a>
-							<a href="#" class="btn btn--clean">Очистить</a>
+							<button class="btn btn--red btn--form">Заказать</button>
+							<button type="reset" href="#" class="btn btn--clean">Очистить</button>
 						</div>
 					</div>
 		      </div>
@@ -916,17 +916,17 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
 					<div class="reviews__photo" style="background-image: url(img/photo-6.jpg);"> </div>
-					<div class="reviews__desc">
+					<div class="reviews__desc"> 
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
@@ -934,8 +934,8 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
@@ -943,8 +943,8 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
@@ -952,8 +952,8 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
@@ -961,8 +961,8 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
@@ -970,8 +970,8 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 				<li class="reviews__item">
@@ -979,8 +979,8 @@
 					<div class="reviews__desc">
 						<h5 class="reviews__title">Константин Спилберг</h5>
 						<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть...Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-						<a href="#" class="btn-learn-more">подробнее</a>
-						<a href="#" class="btn-learn-more btn-reviews ">Читать отзыв</a>
+						<button href="#" class="btn-reviews btn-learn-more "> Подробнее</button>
+						<a href="#" class="btn-reviews btn-learn-more  btn-reviews--mobile">Читать отзыв</a>
 					</div>
 				</li>
 			</ul>
@@ -1106,6 +1106,15 @@
 </nav>
 
 </div>
+<script type="template" id="overlayTemplate">
+	<div class="overlay">
+		<div class="overlay__container">
+			<a class="overlay__close" href="#"></a>
+			<div class="overlay__head"></div>
+			<div class="overlay__content"></div>
+		</div>
+	</div>
+</script>
 <script src="scripts/main.js"></script>
 	</div>
 	
