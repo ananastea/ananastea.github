@@ -1,0 +1,75 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #2f3234;
+    background: rgba(47, 50, 52, 0.9);
+    z-index: 10000;
+}
+
+.overlay__container {
+    position: relative;
+    padding: 1.5rem;
+    width: 28.75rem;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.overlay__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20Px;
+    height: 20Px;
+    z-index: 999;
+}
+
+.overlay__close::before, .overlay__close::after {
+    content: '';
+    position: absolute;
+    top: 5Px;
+    width: 4Px;
+    height: 20Px;
+    background: #ff0909;
+    -webkit-border-radius: 4Px;
+    border-radius: 4Px;
+}
+
+.overlay__close::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.overlay__close::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.overlay__head {
+    font-family: 'gagalinregular', Arial, sans-serif;
+    margin-bottom: 25Px;
+}
+
+.overlay__content {
+    line-height: 1.7;
+    font-family: 'ubuntulight', Arial, sans-serif;
+}
