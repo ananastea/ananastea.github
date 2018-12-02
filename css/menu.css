@@ -32,6 +32,25 @@ height: 100%;
     display: -ms-flexbox;
     display: flex;
 }
+.menu__item.is-active .menu__title {
+      color:#f9b43b;
+    }
+
+    .menu__text{
+        
+        font-size: 0.875rem;
+        line-height: 1.714em;
+        padding: 4rem 2rem;
+        opacity: 0;
+    }
+.menu__item.is-active .menu__text {
+    color: #fff;
+        font-family: Ubuntu;
+    opacity: 1;
+    transition: opacity .3s;
+    transition-delay: .7s;
+  }
+
 
 .menu__link{
 	background-repeat: no-repeat;
@@ -65,11 +84,10 @@ height: 100%;
     width: 0;
     height: 100%;
     overflow: hidden;
+    background: rgba(47, 50, 52, 0.93);
+    transition: width .5s;
 }
 
-.menu__text{
-	color: #fff;
-    font-family: Ubuntu-Light;
-    font-size: 0.875rem;
-    line-height: 1.714em;
+.menu__title:hover{
+    color:#f9b43b;
 }
