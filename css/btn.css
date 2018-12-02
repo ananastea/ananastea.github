@@ -17,14 +17,10 @@
   text-decoration: none;
   padding: 0.75rem 0.875rem 0.75rem 0.875rem;
   border-radius: 0.3125rem;
-  background-color: #2f3234;
   text-transform: uppercase;
   font-family: Ubuntu;
   font-size: 0.8125rem;
-  color: #fff;
-  text-align: center;
-  line-height: 1;
-  align-self: flex-start;
+ 
 }
   .btn-learn-more:hover {
     background-color: #1f2122; }
@@ -35,17 +31,46 @@
 }
   
 .btn-reviews{
-  display: none;}
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  align-self: flex-start;
+  background-color: #2f3234;}
+  @media (max-width: 768px){
+    .btn-reviews{
+      display: block;
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+   }
+  }
   @media (max-width: 480px){
      .btn-reviews{
-       display: block;
+      display: none;
        margin-top: 1.25rem;
-       aligin-self: center;
+       align-self: center;
     }
 }
 
+@media (max-width: 480px){
+  .btn-reviews--mobile{
+  display: none;
+}
+}
+
+.btn-reviews--mobile{
+  display: none;
+
+}
+@media (max-width: 480px){
+  .btn-reviews--mobile{
+  display: block;
+  margin-top: 1.25rem;
+}
+}
+
 .btn--clean{
-      color: #fff;
+      color: rgb(196, 193, 193);
   text-transform: capitalize;
     font-size: 0.875rem;
       padding: 0.6875rem 1.1875rem;
@@ -55,4 +80,5 @@
     -ms-flex-item-align: center;
     align-self: center;
     font-family: Ubuntu;
+    outline: none;
 }
