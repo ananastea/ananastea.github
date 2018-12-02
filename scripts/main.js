@@ -91,7 +91,7 @@ function mySlider() {
 	
 	function accordionMenu() {
 		const menuItems = document.querySelectorAll('.menu__item');
-		const menuAccord = document.querySelector('.menu__acco');
+		const menuAccord = document.querySelector('.menu__acco-list');
 	
 		menuAccord.addEventListener('click', event => {
 			event.preventDefault();
@@ -230,12 +230,12 @@ function sentFormData() {
 		const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.stringify(formData));
+        xhr.send(formData);
 		const overlay = createOverlay(document.querySelector('#overlayTemplate').innerHTML);
 		xhr.addEventListener('load', () => {
 			overlay.open();
 			if (xhr.status <= 400) {
-				const message = 'Заказ оформлен';
+				const message = xhr.response.message;
 				overlay.setContent('', message);
 			} else {
 				const message = 'Ошибка! ';
