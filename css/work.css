@@ -1,0 +1,110 @@
+.work {
+  background: url(/img/work-bg.jpg) center center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.player {
+  position: relative;
+  display: inline-block;
+  width: 60%;}
+  @media (max-width: 768px) {
+    .player {
+      width: 95%; } }
+
+  .player__splash {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+
+    .player__wrapper.active .player__splash {
+      display: none;
+  }
+  .player__wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  
+}
+  .player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.1875rem;
+    background: #3e3e3e;
+}
+
+.player__start {
+  width: 0;
+  height: 0;
+  border: 0.6875rem solid transparent;
+  border-left-color: #626262;
+  padding: 0;
+  border-right-width: 0;
+  background: transparent;
+  position: absolute;
+  top: 5px;
+  left: 1.25rem;
+  outline: none;
+}
+
+.player__playback {
+  position: absolute;
+  height: 4px;
+  width: 27.875rem;
+  background: #626262;
+  top: 0.9375rem;
+  left: 3.125rem;
+}
+
+.player__duration {
+  position: absolute;
+  top: 0.4375rem;
+  right: 1.25rem;
+  color: #626262;
+  font-weight: bold;
+}
+
+.player__playback-button {
+  background: #626262;
+  -webkit-border-radius: 3.125rem;
+  border-radius: 3.125rem;
+  border: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  position: absolute;
+  top: -4px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 0;
+}
+
+.player__duration {
+  position: absolute;
+  top: 0.4375rem;
+  right: 1.25rem;
+  color: #626262;
+  font-weight: bold;
+}
