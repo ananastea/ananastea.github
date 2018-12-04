@@ -33,7 +33,8 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   font-weight: normal; }
 
-.wrapper {
+.wrapper {    height: 100%;
+  width: 100%;
   margin: 0 auto;
   position: relative; }
 
@@ -51,7 +52,9 @@ h1, h2, h3, h4, h5 {
   -ms-flex-direction: column;
   flex-direction: column; }
  
-
+  .maincontent {height: 100%;
+    transition: transform 0.7s;
+  }
 .section {
   width: 100%;
   height: 100vh;
